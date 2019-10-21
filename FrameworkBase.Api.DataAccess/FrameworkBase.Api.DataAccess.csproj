@@ -9,4 +9,12 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrameworkBase.Api.DataAccess.Contracts\FrameworkBase.Api.DataAccess.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

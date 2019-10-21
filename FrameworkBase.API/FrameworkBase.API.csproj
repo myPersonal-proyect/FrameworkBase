@@ -14,4 +14,8 @@
     <Folder Include="Filters\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FrameworkBase.Api.DataAccess\FrameworkBase.Api.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,33 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.API", "FrameworkBase.API\FrameworkBase.API.csproj", "{DF484E0A-081E-4929-877E-FC816295DFAD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Layers", "1-Layers", "{B8041D04-31F0-4A6D-A4B7-579CC49A6DCD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Distributed Services", "1.1 Distributed Services", "{8EC97FF2-B5CE-4E4E-A96F-20D9F31B86C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Aplicacion", "1.2 Aplicacion", "{A2F47F36-54BE-4DF3-BBDE-942D64A4166D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.Application", "FrameworkBase.Api.Application\FrameworkBase.Api.Application.csproj", "{95134DFF-43B7-4860-8E49-00275606DB7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.Application", "FrameworkBase.Api.Application\FrameworkBase.Api.Application.csproj", "{95134DFF-43B7-4860-8E49-00275606DB7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.Application.Contracts", "FrameworkBase.Api.Application.Contracts\FrameworkBase.Api.Application.Contracts.csproj", "{B245015B-5993-4C8F-B47C-CF97807D5CE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.Application.Contracts", "FrameworkBase.Api.Application.Contracts\FrameworkBase.Api.Application.Contracts.csproj", "{B245015B-5993-4C8F-B47C-CF97807D5CE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.Application.Tests", "FrameworkBase.Api.Application.Tests\FrameworkBase.Api.Application.Tests.csproj", "{6A08CA45-966B-4201-8386-95CCB30B01F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.Application.Tests", "FrameworkBase.Api.Application.Tests\FrameworkBase.Api.Application.Tests.csproj", "{6A08CA45-966B-4201-8386-95CCB30B01F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 Business", "1.3 Business", "{B8DE61F7-E3F4-4F41-947C-7F60B47CEAC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.Business", "FrameworkBase.Api.Business\FrameworkBase.Api.Business.csproj", "{D2D47239-59C1-45EB-BB3A-3113E902301C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.Business", "FrameworkBase.Api.Business\FrameworkBase.Api.Business.csproj", "{D2D47239-59C1-45EB-BB3A-3113E902301C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4 DataAccess", "1.4 DataAccess", "{3FF4FE53-2C71-4FA7-A13F-08F7661890DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.DataAccess.Contracts", "FrameworkBase.Api.DataAccess.Contracts\FrameworkBase.Api.DataAccess.Contracts.csproj", "{5D380763-FD40-4F85-9B4A-87544CF353E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.DataAccess.Contracts", "FrameworkBase.Api.DataAccess.Contracts\FrameworkBase.Api.DataAccess.Contracts.csproj", "{5D380763-FD40-4F85-9B4A-87544CF353E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.DataAccess", "FrameworkBase.Api.DataAccess\FrameworkBase.Api.DataAccess.csproj", "{F022EB08-5428-4BE7-9BDA-B3B7E45B278C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.DataAccess", "FrameworkBase.Api.DataAccess\FrameworkBase.Api.DataAccess.csproj", "{F022EB08-5428-4BE7-9BDA-B3B7E45B278C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5 Cross Cutting", "1.5 Cross Cutting", "{4A9B35F4-AFBF-4A72-9B0D-5EEE3060B05D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkBase.Api.CrossCutting", "FrameworkBase.Api.CrossCutting\FrameworkBase.Api.CrossCutting.csproj", "{4DC971FC-3D42-40AE-9825-7BD2F830F620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBase.Api.CrossCutting", "FrameworkBase.Api.CrossCutting\FrameworkBase.Api.CrossCutting.csproj", "{4DC971FC-3D42-40AE-9825-7BD2F830F620}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DF484E0A-081E-4929-877E-FC816295DFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF484E0A-081E-4929-877E-FC816295DFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF484E0A-081E-4929-877E-FC816295DFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF484E0A-081E-4929-877E-FC816295DFAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95134DFF-43B7-4860-8E49-00275606DB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95134DFF-43B7-4860-8E49-00275606DB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95134DFF-43B7-4860-8E49-00275606DB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,7 +68,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DF484E0A-081E-4929-877E-FC816295DFAD} = {8EC97FF2-B5CE-4E4E-A96F-20D9F31B86C1}
 		{8EC97FF2-B5CE-4E4E-A96F-20D9F31B86C1} = {B8041D04-31F0-4A6D-A4B7-579CC49A6DCD}
 		{A2F47F36-54BE-4DF3-BBDE-942D64A4166D} = {B8041D04-31F0-4A6D-A4B7-579CC49A6DCD}
 		{95134DFF-43B7-4860-8E49-00275606DB7A} = {A2F47F36-54BE-4DF3-BBDE-942D64A4166D}
