@@ -5,14 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FrameworkBase.Api.DataAccess
 {
-    public class DataContext : DbContext,IDataContext
+    public class DataContext : DbContext
     {
-        public DataContext()
-        {
+        public DataContext() { }
 
-        }
-
-        public DataContext(DbContextOptions opcions) : base(opcions) { }
+        public DataContext(DbContextOptions options) : base(options) { }
        
 
         public DbSet<AdminEntity> Admins { get; set; }
@@ -37,21 +34,21 @@ namespace FrameworkBase.Api.DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            AdminEntityConfig.SetEntityBuilder(modelBuilder.Entity<AdminEntity>());
+            //AdminEntityConfig.SetEntityBuilder(modelBuilder.Entity<AdminEntity>());
 
-            BookingEntityConfig.SetEntityBuilder(modelBuilder.Entity<BookingEntity>());
+            //BookingEntityConfig.SetEntityBuilder(modelBuilder.Entity<BookingEntity>());
 
-            OfficeEntityConfig.SetEntityBuilder(modelBuilder.Entity<OfficeEntity>());
+            //OfficeEntityConfig.SetEntityBuilder(modelBuilder.Entity<OfficeEntity>());
 
-            Office2RoomEntityConfig.SetEntityBuilder(modelBuilder.Entity<Office2RoomsEntity>());
+            //Office2RoomEntityConfig.SetEntityBuilder(modelBuilder.Entity<Office2RoomsEntity>());
 
-            RoomEntityConfig.SetEntityBuilder(modelBuilder.Entity<RoomEntity>());
+            //RoomEntityConfig.SetEntityBuilder(modelBuilder.Entity<RoomEntity>());
 
-            Room2ServiceEntityConfig.SetEntityBuilder(modelBuilder.Entity<Room2ServiceEntity>());
+            //Room2ServiceEntityConfig.SetEntityBuilder(modelBuilder.Entity<Room2ServiceEntity>());
 
-            UserEntityConfig.SetEntityBuilder(modelBuilder.Entity<UserEntity>());
+            //UserEntityConfig.SetEntityBuilder(modelBuilder.Entity<UserEntity>());
 
-            ServiceEntityConfig.SetEntityBuilder(modelBuilder.Entity<ServiceEntity>());
+            //ServiceEntityConfig.SetEntityBuilder(modelBuilder.Entity<ServiceEntity>());
 
 
 
