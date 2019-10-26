@@ -12,11 +12,11 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.ToTable("Admins");
            
             //---------- Id requered -----------//
-            entityBuilder.HasKey(x => x.Id);
-            entityBuilder.Property(x => x.Id).IsRequired();
+            entityBuilder.HasKey(x => x.AdminId);
+            entityBuilder.Property(x => x.AdminId).IsRequired();
 
             // ---------- Relation ------------//
-            entityBuilder.HasOne(x => x.Office).WithOne(x =>x.Admin);
+            entityBuilder.HasOne(x => x.Office).WithOne(x => x.Admin);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
 
             entityBuilder.HasOne(x => x.Admin).WithOne(x => x.Office);
             entityBuilder.HasOne(x => x.Booking).WithOne(x => x.Office);
-        //  entityBuilder.HasMany(x => x.Office2Rooms).WithOne(x => x.Office);
+            entityBuilder.HasMany(x => x.Office2Rooms).WithOne(x => x.Office);
 
         }
 

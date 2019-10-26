@@ -16,7 +16,7 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 
         public bool Active { get; set; }
 
-        public int IdAdmin { get; set; }
+        public int AdminId { get; set; }
 
         public bool HasIndividualWorkSpace { get; set; }
 
