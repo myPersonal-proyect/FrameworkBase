@@ -5,6 +5,6 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Repositories
 {
     public interface IRoomRepository : IRepository<RoomEntity>
     {
-        Task<OfficeEntity> Update(OfficeEntity entity);
+        Task<RoomEntity> Update(RoomEntity entity);
     }
 }

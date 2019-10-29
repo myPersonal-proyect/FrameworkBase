@@ -62,9 +62,9 @@ namespace FrameworkBase.Api.DataAccess.Repositories
         }
 
 
-        public Task<IEnumerable<AdminEntity>> GetAll()
+        public async Task<IEnumerable<AdminEntity>> GetAll()
         {
-            throw new System.NotImplementedException();
+            return await _context.Admins.ToListAsync();
         }
 
         public async Task<AdminEntity> Update(int id, AdminEntity updateEntity)
