@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FrameworkBase.Api.CrossCutting\FrameworkBase.Api.CrossCutting.csproj" />
     <ProjectReference Include="..\FrameworkBase.Api.DataAccess\FrameworkBase.Api.DataAccess.csproj" />
   </ItemGroup>
 

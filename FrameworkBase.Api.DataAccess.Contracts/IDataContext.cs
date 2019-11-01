@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using FrameworkBase.Api.DataAccess.Contracts.Entities;
+﻿using FrameworkBase.Api.DataAccess.Contracts.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace FrameworkBase.Api.DataAccess.Contracts
 {
@@ -30,13 +29,13 @@ namespace FrameworkBase.Api.DataAccess.Contracts
 
 
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
-       
+
         DatabaseFacade Database { get; }
-        
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
-        
+
         void RemoveRange(IEnumerable<object> entity);
-       
+
         EntityEntry Update(object entity);
 
     }

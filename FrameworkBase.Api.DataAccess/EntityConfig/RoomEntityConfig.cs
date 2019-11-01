@@ -15,7 +15,7 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.HasKey(x => x.Id);
             entityBuilder.Property(x => x.Id).IsRequired();
 
-       
+
         }
     }
 }

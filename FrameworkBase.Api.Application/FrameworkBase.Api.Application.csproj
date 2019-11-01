@@ -6,7 +6,13 @@
 
   <ItemGroup>
     <Folder Include="Mappers\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrameworkBase.Api.Application.Contracts\FrameworkBase.Api.Application.Contracts.csproj" />
+    <ProjectReference Include="..\FrameworkBase.Api.Business\FrameworkBase.Api.Business.csproj" />
+    <ProjectReference Include="..\FrameworkBase.Api.DataAccess.Contracts\FrameworkBase.Api.DataAccess.Contracts.csproj" />
+    <ProjectReference Include="..\FrameworkBase.Api.DataAccess\FrameworkBase.Api.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

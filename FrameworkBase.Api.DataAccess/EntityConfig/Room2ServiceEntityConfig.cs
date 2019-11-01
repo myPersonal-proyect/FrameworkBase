@@ -10,7 +10,7 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
         {
             entityBuilder.ToTable("Room2Services");
 
-            
+
             entityBuilder.HasOne(X => X.Room).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.IdRoom);
             entityBuilder.HasOne(X => X.Service).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.IdService);
 

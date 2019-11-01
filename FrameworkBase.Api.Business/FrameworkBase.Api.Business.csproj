@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\FrameworkBase.Api.DataAccess.Contracts\FrameworkBase.Api.DataAccess.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

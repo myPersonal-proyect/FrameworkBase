@@ -4,7 +4,6 @@ using FrameworkBase.Api.DataAccess.Contracts.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FrameworkBase.Api.DataAccess.Repositories
@@ -27,7 +26,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
 
             return element;
         }
-       
+
         public async Task<IEnumerable<RoomEntity>> GetAll()
         {
             return await _context.Rooms.ToListAsync();
@@ -62,7 +61,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
             await _context.SaveChangesAsync();
         }
 
-    
+
         public async Task<RoomEntity> Get(int id)
         {
             return await _context.Rooms.Include(x => x.Office2Rooms)

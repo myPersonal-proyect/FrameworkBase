@@ -4,7 +4,7 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 {
     public class OfficeEntity
     {
-        public int Id { get; set; }
+        public int OfficeId { get; set; }
 
         public string Name { get; set; }
 
@@ -30,7 +30,7 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
         public virtual AdminEntity Admin { get; set; }
 
         public virtual ICollection<Office2RoomsEntity> Office2Rooms { get; set; }
-       
+
         public virtual BookingEntity Booking { get; set; }
     }
 }

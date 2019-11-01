@@ -27,7 +27,7 @@ namespace FrameworkBase.Api.DataAccess
 
         public DbSet<ServiceEntity> Services { get; set; }
 
-    
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

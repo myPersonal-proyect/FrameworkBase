@@ -10,7 +10,7 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
         {
             // ----------Table Admins ----------//
             entityBuilder.ToTable("Admins");
-           
+
             //---------- Id requered -----------//
             entityBuilder.HasKey(x => x.AdminId);
             entityBuilder.Property(x => x.AdminId).IsRequired();

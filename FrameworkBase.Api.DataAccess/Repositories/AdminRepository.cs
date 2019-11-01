@@ -2,16 +2,17 @@
 using FrameworkBase.Api.DataAccess.Contracts.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FrameworkBase.Api.DataAccess.Repositories
 {
-    public class OfficeRepository : IAdminRepository
+    public class AdminRepository : IAdminRepository
     {
         private readonly IDataContext _context;
 
 
-        public OfficeRepository(IDataContext context)
+        public AdminRepository(IDataContext context)
         {
             _context = context;
         }
@@ -64,7 +65,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
 
         public async Task<IEnumerable<AdminEntity>> GetAll()
         {
-            return await _context.Admins.ToListAsync();
+            return await _context.Admins.Select(x => x).ToListAsync();
         }
 
         public async Task<AdminEntity> Update(int id, AdminEntity updateEntity)
