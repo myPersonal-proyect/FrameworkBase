@@ -47,8 +47,8 @@ namespace FrameworkBase.Api.DataAccess.Repositories
         }
         public async Task<AdminEntity> Get(int id)
         {
-            return await _context.Admins.Include(x => x.Office)
-                                 .FirstOrDefaultAsync(x => x.AdminId == id);
+            var resul = await _context.Admins.Include(y => y.Office).FirstOrDefaultAsync(x => x.AdminId == id);
+            return resul;
 
         }
 

@@ -19,6 +19,7 @@ namespace FrameworkBase.Api.CrossCutting.Register
 
         public static IServiceCollection AddRegistration(this IServiceCollection services)
         {
+            AddRegistrationService(services);
             AddRegistrationRepository(services);
 
             return services;

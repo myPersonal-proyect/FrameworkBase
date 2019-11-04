@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 {
@@ -16,8 +17,6 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 
         public bool Active { get; set; }
 
-        public int AdminId { get; set; }
-
         public bool HasIndividualWorkSpace { get; set; }
 
         public int NumerWorkSpace { get; set; }
@@ -27,6 +26,7 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
         public decimal PriceWorkSpaceMonthly { get; set; }
 
 
+        public int AdminId { get; set; }
         public virtual AdminEntity Admin { get; set; }
 
         public virtual ICollection<Office2RoomsEntity> Office2Rooms { get; set; }

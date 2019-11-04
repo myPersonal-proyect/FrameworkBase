@@ -1,4 +1,6 @@
-﻿namespace FrameworkBase.Api.DataAccess.Contracts.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 {
     public class AdminEntity
     {
@@ -13,7 +15,6 @@
         public string Phone { get; set; }
 
         public int OfficeId { get; set; }
-
         public virtual OfficeEntity Office { get; set; }
 
     }
