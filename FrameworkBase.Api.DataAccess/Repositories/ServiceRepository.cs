@@ -28,7 +28,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _context.Services.SingleAsync(x => x.Id == id);
+            var entity = await _context.Services.SingleAsync(x => x.ServiceId == id);
 
             _context.Services.Remove(entity);
             await _context.SaveChangesAsync();
@@ -41,7 +41,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
 
         public async Task<ServiceEntity> Get(int id)
         {
-            return await _context.Services.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Services.FirstOrDefaultAsync(x => x.ServiceId == id);
         }
 
         public async Task<IEnumerable<ServiceEntity>> GetAll()

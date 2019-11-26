@@ -10,8 +10,8 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
         {
             entityBuilder.ToTable("Services");
 
-            entityBuilder.HasKey(x => x.Id);
-            entityBuilder.Property(x => x.Id).IsRequired();
+            entityBuilder.HasKey(x => x.ServiceId);
+            entityBuilder.Property(x => x.ServiceId).IsRequired();
 
         }
 

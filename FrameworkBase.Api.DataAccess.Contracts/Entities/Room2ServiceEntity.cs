@@ -2,9 +2,9 @@
 {
     public class Room2ServiceEntity
     {
-        public int IdRoom { get; set; }
+        public int RoomId { get; set; }
 
-        public int IdService { get; set; }
+        public int ServiceId { get; set; }
 
         public virtual RoomEntity Room { get; set; }
 

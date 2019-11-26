@@ -10,8 +10,8 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
         {
             entityBuilder.ToTable("Bookings");
 
-            entityBuilder.HasKey(x => x.Id);
-            entityBuilder.Property(x => x.Id).IsRequired();
+            entityBuilder.HasKey(x => x.BookingId);
+            entityBuilder.Property(x => x.BookingId).IsRequired();
 
             entityBuilder.HasOne(x => x.Office).WithOne(x => x.Booking);
             entityBuilder.HasOne(x => x.User).WithOne(x => x.Booking);

@@ -4,7 +4,7 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 {
     public class ServiceEntity
     {
-        public int Id { get; set; }
+        public int ServiceId { get; set; }
 
         public string Name { get; set; }
 

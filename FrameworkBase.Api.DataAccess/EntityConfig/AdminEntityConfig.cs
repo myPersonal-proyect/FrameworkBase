@@ -14,12 +14,11 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             //---------- Id requered -----------//
             entityBuilder.HasKey(x => x.AdminId);
             entityBuilder.Property(x => x.AdminId).IsRequired();
-           
+
 
             // ---------- Relation ------------//
-            entityBuilder.HasOne(x => x.Office).WithOne(o => o.Admin)
-                .HasForeignKey<OfficeEntity>(o =>o.OfficeId);
-         
+          
+
         }
     }
 }

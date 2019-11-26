@@ -10,8 +10,6 @@ namespace FrameworkBase.Api.DataAccess.Mappers
             return new AdminEntity
             {
                 Name = dto.Name,
-                AdminId = dto.AdminId,
-                OfficeId = dto.OfficeId,
                 Email = dto.Email,
                 Address = dto.Address,
                 Phone = dto.Phone,
@@ -25,8 +23,6 @@ namespace FrameworkBase.Api.DataAccess.Mappers
             {
 
                 Name = entity.Name,
-                AdminId = entity.AdminId,
-                OfficeId = entity.OfficeId,
                 Email = entity.Email,
                 Address = entity.Address,
                 Phone = entity.Phone,

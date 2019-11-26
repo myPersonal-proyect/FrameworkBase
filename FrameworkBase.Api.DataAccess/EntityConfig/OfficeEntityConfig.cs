@@ -12,13 +12,12 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
 
             entityBuilder.HasKey(x => x.OfficeId);
             entityBuilder.Property(x => x.OfficeId).IsRequired();
+        
 
-            entityBuilder.HasOne(x => x.Admin).WithOne(y => y.Office)
-            .HasForeignKey<AdminEntity>(y => y.AdminId);
-
+            entityBuilder.HasOne(x => x.Admin).WithOne(x => x.Office);
             entityBuilder.HasOne(x => x.Booking).WithOne(x => x.Office);
             entityBuilder.HasMany(x => x.Office2Rooms).WithOne(x => x.Office);
-
+ 
         }
 
 

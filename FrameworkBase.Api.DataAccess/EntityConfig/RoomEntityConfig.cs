@@ -12,8 +12,8 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.ToTable("Room");
 
             //---------- Id requered -----------//
-            entityBuilder.HasKey(x => x.Id);
-            entityBuilder.Property(x => x.Id).IsRequired();
+            entityBuilder.HasKey(x => x.RoomId);
+            entityBuilder.Property(x => x.RoomId).IsRequired();
 
 
         }

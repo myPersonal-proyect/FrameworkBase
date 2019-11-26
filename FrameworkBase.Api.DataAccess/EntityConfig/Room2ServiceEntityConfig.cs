@@ -11,13 +11,13 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.ToTable("Room2Services");
 
 
-            entityBuilder.HasOne(X => X.Room).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.IdRoom);
-            entityBuilder.HasOne(X => X.Service).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.IdService);
+            entityBuilder.HasOne(X => X.Room).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.RoomId);
+            entityBuilder.HasOne(X => X.Service).WithMany(X => X.Room2ServiceEntity).HasForeignKey(X => X.ServiceId);
 
-            entityBuilder.HasKey(x => new { x.IdRoom, x.IdService });
+            entityBuilder.HasKey(x => new { x.RoomId, x.ServiceId });
 
-            entityBuilder.Property(x => x.IdRoom).IsRequired();
-            entityBuilder.Property(x => x.IdService).IsRequired();
+            entityBuilder.Property(x => x.RoomId).IsRequired();
+            entityBuilder.Property(x => x.ServiceId).IsRequired();
         }
     }
 }

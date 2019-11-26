@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FrameworkBase.Api.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191102014211_ErrorTables")]
-    partial class ErrorTables
+    [Migration("20191106174835_Complete1")]
+    partial class Complete1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,8 +23,10 @@ namespace FrameworkBase.Api.DataAccess.Migrations
 
             modelBuilder.Entity("FrameworkBase.Api.DataAccess.Contracts.Entities.AdminEntity", b =>
                 {
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -35,13 +37,10 @@ namespace FrameworkBase.Api.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OfficeId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AdminId");
+                    b.HasKey("Id");
 
                     b.ToTable("Admins");
                 });
@@ -84,13 +83,13 @@ namespace FrameworkBase.Api.DataAccess.Migrations
 
             modelBuilder.Entity("FrameworkBase.Api.DataAccess.Contracts.Entities.Office2RoomsEntity", b =>
                 {
-                    b.Property<int>("OfficeId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.HasKey("OfficeId", "RoomId");
+                    b.HasKey("Id", "RoomId");
 
                     b.HasIndex("RoomId");
 
@@ -99,7 +98,7 @@ namespace FrameworkBase.Api.DataAccess.Migrations
 
             modelBuilder.Entity("FrameworkBase.Api.DataAccess.Contracts.Entities.OfficeEntity", b =>
                 {
-                    b.Property<int>("OfficeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -109,9 +108,6 @@ namespace FrameworkBase.Api.DataAccess.Migrations
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
 
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
@@ -134,7 +130,7 @@ namespace FrameworkBase.Api.DataAccess.Migrations
                     b.Property<decimal>("PriceWorkSpaceMonthly")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("OfficeId");
+                    b.HasKey("Id");
 
                     b.ToTable("Offices");
                 });
@@ -220,15 +216,6 @@ namespace FrameworkBase.Api.DataAccess.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("FrameworkBase.Api.DataAccess.Contracts.Entities.AdminEntity", b =>
-                {
-                    b.HasOne("FrameworkBase.Api.DataAccess.Contracts.Entities.OfficeEntity", "Office")
-                        .WithOne("Admin")
-                        .HasForeignKey("FrameworkBase.Api.DataAccess.Contracts.Entities.AdminEntity", "AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("FrameworkBase.Api.DataAccess.Contracts.Entities.BookingEntity", b =>
                 {
                     b.HasOne("FrameworkBase.Api.DataAccess.Contracts.Entities.OfficeEntity", "Office")
@@ -248,7 +235,7 @@ namespace FrameworkBase.Api.DataAccess.Migrations
                 {
                     b.HasOne("FrameworkBase.Api.DataAccess.Contracts.Entities.OfficeEntity", "Office")
                         .WithMany("Office2Rooms")
-                        .HasForeignKey("OfficeId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

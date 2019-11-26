@@ -34,7 +34,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _context.Bookings.SingleAsync(x => x.Id == id);
+            var entity = await _context.Bookings.SingleAsync(x => x.BookingId == id);
 
             _context.Bookings.Remove(entity);
             await _context.SaveChangesAsync();
@@ -45,7 +45,7 @@ namespace FrameworkBase.Api.DataAccess.Repositories
         public async Task<BookingEntity> Get(int id)
         {
             return await _context.Bookings.Include(x => x.Office)
-                                                       .FirstOrDefaultAsync(x => x.Id == id);
+                                                       .FirstOrDefaultAsync(x => x.BookingId == id);
         }
 
 

@@ -15,6 +15,7 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.HasOne(X => X.Room).WithMany(X => X.Office2Rooms).HasForeignKey(X => X.RoomId);
 
             entityBuilder.HasKey(x => new { x.OfficeId, x.RoomId });
+           
             entityBuilder.Property(x => x.OfficeId).IsRequired();
             entityBuilder.Property(x => x.RoomId).IsRequired();
         }
