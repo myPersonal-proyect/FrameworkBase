@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 {
     public class AdminEntity
     {
+       
         public int AdminId { get; set; }
 
         public string Name { get; set; }
@@ -13,10 +15,9 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
         public string Email { get; set; }
 
         public string Phone { get; set; }
-
-
+        
+        
         public int OfficeId { get; set; }
-       
         public virtual  OfficeEntity Office { get; set; }
     }
 }

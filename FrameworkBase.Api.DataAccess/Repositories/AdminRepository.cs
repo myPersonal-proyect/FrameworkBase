@@ -56,10 +56,9 @@ namespace FrameworkBase.Api.DataAccess.Repositories
         public async Task DeleteAsync(int id)
         {
             var entity = await _context.Admins.SingleAsync(x => x.AdminId == id);
-
+            
             _context.Admins.Remove(entity);
             await _context.SaveChangesAsync();
-
         }
 
 
@@ -72,10 +71,8 @@ namespace FrameworkBase.Api.DataAccess.Repositories
         {
             var entity = await Get(id);
 
-
-            var update = _context.Admins.Update(entity);
+            var update = _context.Admins.Update(entity);            
             await _context.SaveChangesAsync();
-
 
             return update.Entity;
         }

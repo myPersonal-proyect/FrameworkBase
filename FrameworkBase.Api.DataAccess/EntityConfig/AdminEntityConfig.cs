@@ -15,10 +15,13 @@ namespace FrameworkBase.Api.DataAccess.EntityConfig
             entityBuilder.HasKey(x => x.AdminId);
             entityBuilder.Property(x => x.AdminId).IsRequired();
 
+            entityBuilder.HasKey(x => x.OfficeId);
+            entityBuilder.Property(x => x.OfficeId).IsRequired();
+
 
             // ---------- Relation ------------//
-          
 
+            entityBuilder.HasOne(x => x.Office).WithOne(x => x.Admin);
         }
     }
 }

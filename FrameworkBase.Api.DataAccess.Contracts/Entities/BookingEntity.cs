@@ -21,6 +21,5 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
 
         public virtual OfficeEntity Office { get; set; }
 
-
     }
 }

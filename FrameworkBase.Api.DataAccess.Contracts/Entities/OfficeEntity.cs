@@ -23,8 +23,8 @@ namespace FrameworkBase.Api.DataAccess.Contracts.Entities
         public decimal PriceWorkSpaceDaily { get; set; }
 
         public decimal PriceWorkSpaceMonthly { get; set; }
-
-        public int AdminId { get; set; }
+        
+        public int Id { get; set; }
         public virtual AdminEntity Admin { get; set; }
          
         public virtual BookingEntity Booking { get; set; }

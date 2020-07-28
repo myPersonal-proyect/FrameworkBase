@@ -22,14 +22,18 @@ namespace Framework.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //-------------- DATABASE ----------------//
-            services.AddScoped<IDataContext, DataContext>();
+            //-------------- Configuration Database ----------------//
+
             services.AddDbContext<DataContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
-            
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+           
+            //-------------- DATABASE ----------------//
+
+            services.AddScoped<IDataContext, DataContext>();
+
+
             // -------REGISTER SERVICES ---------//
+
             IoCRegister.AddRegistration(services);
 
 
@@ -37,8 +41,6 @@ namespace Framework.Web
         }
 
 
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
